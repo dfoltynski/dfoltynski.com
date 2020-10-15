@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 
 const HomePage = () => {
   return (
-    <main>
+    <section>
       <img
         className="background__svg1"
         src={BackgroundSvg1}
@@ -29,7 +29,7 @@ const HomePage = () => {
           <p style={{ color: "#74B9FF", marginTop: "-24px" }}>Designer</p>
         </p>
       </div>
-    </main>
+    </section>
   )
 }
 
