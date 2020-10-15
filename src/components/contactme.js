@@ -2,7 +2,8 @@ import React from "react"
 
 const ContactMe = () => {
   return (
-    <section style={{ position: "relative" }}>
+    <section id="contactme" style={{ position: "relative" }}>
+      <h1 className="getintouch">Get in touch 😄</h1>
       <form>
         <input type="text" placeholder="Name" autoComplete="none" />
         <input type="text" placeholder="E-mail" />

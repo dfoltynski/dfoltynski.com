@@ -24,7 +24,12 @@
 }
 
 nav {
+  width: 100%;
+  z-index: 5;
+  background-color: #fff;
+  position: fixed;
   font-size: 26px;
+  text-align: center;
   font-weight: 500;
 }
 
@@ -34,7 +39,8 @@ ul {
 
 li {
   display: inline;
-  padding: 1em;
+  margin: 1em;
+  cursor: pointer;
 }
 
 a {
@@ -320,6 +326,18 @@ textarea:focus {
   }
   textarea {
     width: 25em;
+  }
+}
+
+.getintouch {
+  font-size: 64px;
+  position: absolute;
+  margin-top: 2em;
+}
+
+@media screen and (max-width: 481px) and (max-device-width: 481px) {
+  .getintouch {
+    font-size: 40px;
   }
 }
 

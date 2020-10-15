@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 
 const HomePage = () => {
   return (
-    <section>
+    <section id="homepage">
       <img
         className="background__svg1"
         src={BackgroundSvg1}

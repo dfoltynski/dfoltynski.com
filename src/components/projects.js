@@ -7,7 +7,7 @@ import BackgroundSvg2 from "../images/projects_background_2.svg"
 
 const Projects = () => {
   return (
-    <section>
+    <section id="projects">
       <h1 className="projects__title">meetme</h1>
       <img
         className="projects__img"
