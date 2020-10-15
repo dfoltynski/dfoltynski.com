@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
 .background__svg1 {
   position: absolute;
   left: 5%;
@@ -250,3 +252,94 @@ section {
   }
 }
 /* SKILLS */
+/* CONTACT ME */
+form {
+  margin: auto;
+  /* position: absolute; */
+  /* top: 50%; */
+  /* transform: translateY(-50%); */
+  width: 100%;
+  height: 20em;
+  text-align: center;
+}
+
+input {
+  background: #f5f5f5;
+  border-radius: 21px;
+  border: 2px solid #f5f5f5;
+  margin: 0.5em;
+  padding: 1em;
+  outline: none;
+  transition: 0.2s ease-in-out;
+}
+
+input[type="text"]:focus {
+  transition: 0.2s ease-in-out;
+  border: 2px solid #0984e3;
+  box-shadow: 0px 0px 10px rgba(9, 132, 227, 0.4);
+}
+
+input[type="submit"] {
+  border: none;
+  background: #0984e3;
+  color: #fff;
+  font-size: 20px;
+  padding: 0.5em 2em;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  transition: 0.2s ease-in-out;
+  background: #0a71c0;
+}
+
+textarea {
+  font-family: "Poppins", sans-serif;
+  border: 2px solid #f5f5f5;
+  outline: none;
+  width: 30%;
+  height: 15em;
+  margin: 0.5em;
+  padding: 1em;
+  background: #f5f5f5;
+  border-radius: 21px;
+  resize: none;
+  border: none;
+  transition: 0.2s ease-in-out;
+}
+
+textarea:focus {
+  transition: 0.2s ease-in-out;
+  border: 2px solid #0984e3;
+  box-shadow: 0px 0px 10px rgba(9, 132, 227, 0.4);
+}
+@media screen and (max-width: 1158px) and (max-device-width: 1158px) {
+  input {
+    font-size: 13px;
+  }
+  textarea {
+    width: 25em;
+  }
+}
+
+@media screen and (max-width: 375px) and (max-device-width: 375px) {
+  input[type="text"] {
+    font-size: 12px;
+    width: 8em;
+  }
+  textarea {
+    width: 20em;
+  }
+}
+/* CONTACT ME */
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 300;
+}
