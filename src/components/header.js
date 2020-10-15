@@ -1,48 +1,40 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import React, { useState, useRef } from "react"
 
-const Header = () => (
-  <nav>
-    <ul>
-      <li
-        onClick={() =>
-          window.scrollTo(0, document.getElementById("homepage").offsetTop)
-        }
-      >
-        Home
-      </li>
-      <li
-        onClick={() =>
-          window.scrollTo(0, document.getElementById("projects").offsetTop)
-        }
-      >
-        Projects
-      </li>
-      <li
-        onClick={() =>
-          window.scrollTo(0, document.getElementById("skills").offsetTop - 50)
-        }
-      >
-        Skills
-      </li>
-      <li
-        onClick={() =>
-          window.scrollTo(0, document.getElementById("contactme").offsetTop)
-        }
-      >
-        Contact me
-      </li>
-    </ul>
-  </nav>
-)
+const Header = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  const navbar = useRef()
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+  const scrollToSection = (section_name, offset = 0) => {
+    window.scrollTo(0, document.getElementById(section_name).offsetTop - offset)
+    setIsOpen(false)
+    navbar.current.style.transform = "translateX(0)"
+  }
 
-Header.defaultProps = {
-  siteTitle: ``,
+  return (
+    <>
+      <nav ref={navbar}>
+        <ul>
+          <li onClick={() => scrollToSection("homepage")}>Home</li>
+          <li onClick={() => scrollToSection("projects")}>Projects</li>
+          <li onClick={() => scrollToSection("skills", 50)}>Skills</li>
+          <li onClick={() => scrollToSection("contactme")}>Contact me</li>
+        </ul>
+      </nav>
+      <div
+        className="hamburger"
+        onClick={() => {
+          setIsOpen(!isOpen)
+          !isOpen
+            ? (navbar.current.style.transform = "translateX(100%)")
+            : (navbar.current.style.transform = "translateX(0)")
+        }}
+      >
+        <div className="hamburger__top"></div>
+        <div className="hamburger__middle"></div>
+        <div className="hamburger__bottom"></div>
+      </div>
+    </>
+  )
 }
 
 export default Header
