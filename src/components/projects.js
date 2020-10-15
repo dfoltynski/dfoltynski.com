@@ -16,15 +16,15 @@ const Projects = () => {
       />
       <div style={{ display: "flex" }}>
         <FontAwesomeIcon
-          style={{ margin: "1em", width: "56px", height: "56px" }}
+          style={{ margin: "1em", width: "40px", height: "40px" }}
           icon={faGlobeEurope}
         />
         <FontAwesomeIcon
-          style={{ margin: "1em", width: "56px", height: "56px" }}
+          style={{ margin: "1em", width: "40px", height: "40px" }}
           icon={faGithub}
         />
       </div>
-      <p>
+      <p className="project__desc">
         Application for setting up meetings with random people when you are
         bored
       </p>
